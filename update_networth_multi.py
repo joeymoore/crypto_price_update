@@ -8,8 +8,8 @@ import datetime as dt
 # CONFIG
 # ==============================
 
-INPUT_CSV  = "transactions-5.csv"
-OUTPUT_CSV = "stx_networth_updated.csv"
+INPUT_CSV  = "transactions.csv"
+OUTPUT_CSV = "multiple_networth_updated.csv"
 
 # Extra config for XRP price source used in MAG/USD calc
 XRP_USD_PRICE_JSON = "xrp_price.json"   # XRP/USD JSON (success/data/x/y or list of {x,y})
@@ -23,42 +23,42 @@ TOKEN_CONFIG = {
     #     "price_file": "aps_price.json",
     #     "format": "stats",
     # },
+    "EVR;14799": {
+        "price_file": "evr_price.json",
+        "format": "stats",
+    },
     # # STX – new "xy" format: { "success": true, "data": [{ "x": iso_ts, "y": price }, ...] }
-    # "STX;1770845": {
-    #     "price_file": "stx_price.json",
-    #     "format": "xy",
-    # },
-    # # ASC – new "xy" format
-    # "ASC;7723464": {
-    #     "price_file": "asc_price.json",
-    #     "format": "xy",
-    # },
-    # # ARK – new "xy" format
-    # "ARK;8047083": {
-    #     "price_file": "ark_price.json",
-    #     "format": "xy",
-    # },
-    # # BEAR – new "xy" format
-    # "BEAR;23448216": {
-    #     "price_file": "bear_price.json",
-    #     "format": "xy",
-    # },
-    # # XSPECTAR – new "xy" format
-    # "XSPECTAR;4794440": {
-    #     "price_file": "xspectar_price.json",
-    #     "format": "xy",
-    # },
-    # # HUGETITS – new "xy" format
-    # "HUGETITS;5437660": {
-    #     "price_file": "hugetits_price.json",
-    #     "format": "xy",
-    # },
-    # MAG – special: MAG/XRP (mag_price.json) + XRP/USD (xrp_price.json) -> MAG/USD
-    # BRAD – new "xy" format
     "STX;1770845": {
         "price_file": "stx_price.json",
         "format": "xy",
     },
+    # ASC – new "xy" format
+    "ASC;7723464": {
+        "price_file": "asc_price.json",
+        "format": "xy",
+    },
+    # ARK – new "xy" format
+    "ARK;8047083": {
+        "price_file": "ark_price.json",
+        "format": "xy",
+    },
+    # BEAR – new "xy" format
+    "BEAR;23448216": {
+        "price_file": "bear_price.json",
+        "format": "xy",
+    },
+    # # XSPECTAR – new "xy" format
+    "XSPECTAR;4794440": {
+        "price_file": "xspectar_price.json",
+        "format": "xy",
+    },
+    # # HUGETITS – new "xy" format
+    "HUGETITS;5437660": {
+        "price_file": "hugetits_price.json",
+        "format": "xy",
+    },
+    # MAG – special: MAG/XRP (mag_price.json) + XRP/USD (xrp_price.json) -> MAG/USD
+    # BRAD – new "xy" format
     # "MAG;8678551": {
     #     "price_file": "mag_price.json",   # MAG/XRP OHLC list
     #     "format": "mag_xrp_usd",
